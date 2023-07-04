@@ -9,3 +9,4 @@ type cases = [
 
 // ============= Your Code Here =============
 type HelloWorld = string // expected to be a string
+

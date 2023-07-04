@@ -14,6 +14,8 @@ interface Todo {
   completed: boolean
 }
 
+type b = Todo['title'];
+
 interface Expected1 {
   title: string
 }
@@ -24,5 +26,13 @@ interface Expected2 {
 }
 
 
-// ============= Your Code Here =============
-type MyPick<T, K extends keyof T> = {[key in K] : T[key]};
+// ============= Solution =============
+type MyPick<P1, P2 extends keyof P1> = {[key in P2] : P1[key]};
+
+
+// ============= Explaination =============
+// We can use a map type to create our own pick utility type
+// The 2nd parameter enforces a type constraint on P2, it ensures that P2 is a valid key of type P1
+// {[key in P2] : P1[key]} this is a mapped type
+// [key in P2] iterates over each key in P1
+// P1[key] retrieves value type in P1 using key in P2
