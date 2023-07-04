@@ -14,8 +14,6 @@ interface Todo {
   completed: boolean
 }
 
-type b = Todo['title'];
-
 interface Expected1 {
   title: string
 }
