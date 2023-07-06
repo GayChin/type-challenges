@@ -29,7 +29,7 @@ interface Expected2 {
 type MyOmit<T, K extends keyof T> = {[P in keyof T as P extends K ? never : P] : T[P]};
 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // K extends keyof T ensure K is a subtype/key of T
 // P in keyof T as P extends K, assign each key in T as P, and checks if P is equal to K
 // If equal, returns never, else returns P

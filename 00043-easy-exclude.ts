@@ -12,7 +12,7 @@ type cases = [
 type MyExclude<T, U> = T extends U ? never : T;
 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // This is another way of using extends
 // This feature is aka distributive conditional types
 // It happens when you use a conditional type with a union type as input

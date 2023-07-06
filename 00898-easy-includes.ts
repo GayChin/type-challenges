@@ -30,6 +30,6 @@ T extends [infer Head, ...infer Tail]
   : false;
   
 
-// ============= Explaination =============
+// ============= Explanation =============
 // T extends [infer Head, ...infer Tail], we infer first element of the array as head, and the rest as tail, which can be used for recursion
 // Check if head is equal to u, if yes return true, if not run Includes<Tail,U> recursively

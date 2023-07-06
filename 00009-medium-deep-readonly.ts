@@ -65,7 +65,7 @@ type DeepReadonly<T> = {
 }
 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // keyof T[K] extends never checks if the keys of the type T[K] extend the 'never' type
 // keyof T[K] reperesents union of keys of type T[K]
 // If it extends 'never', it means the type is a primitive type that do not have further value or properties

@@ -35,7 +35,7 @@ type MyReadonly2<T, K extends keyof T = keyof T> =
 {readonly [P in K] : T[P]} &
 {[P in keyof T as P extends K ? never : P] : T[P]} 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // K extends keyof T = keyof T, provides a default value to K, because test 1 do not have K value
 // {readonly [P in K] : T[P]}, makes all keys provided in K is set to readonly
 // Check if P in T is the subset of K, if yes return never, else return P 

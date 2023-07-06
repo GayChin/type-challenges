@@ -25,7 +25,7 @@ const fn1 = (v: boolean, w: any) => v ? 1 : 2
 type MyReturnType<T> = T extends (...args : any[]) => infer R ? R : never;
 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // T extends (...args: any[]) checks if T is a function
 // infer R captures the inferred return type of the function and stores it in variable R
 // If T is a function returns R else returns never, since a non function will not return anything

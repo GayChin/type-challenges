@@ -28,7 +28,7 @@ interface Expected2 {
 type MyPick<P1, P2 extends keyof P1> = {[key in P2] : P1[key]};
 
 
-// ============= Explaination =============
+// ============= Explanation =============
 // We can use a map type to create our own pick utility type
 // The 2nd parameter enforces a type constraint on P2, it ensures that P2 is a valid key of type P1
 // {[key in P2] : P1[key]} this is a mapped type

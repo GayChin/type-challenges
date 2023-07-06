@@ -15,6 +15,6 @@ type cases = [
 // ============= Your Code Here =============
 type MyParameters<T extends (...args: any[]) => any> = T extends (...args: infer S) => any ? S : any;
 
-// ============= Explaination =============
+// ============= Explanation =============
 // Infer type of any[] as S
 // if T is not a function type then return any, if it is then return its parameter types

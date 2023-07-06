@@ -27,7 +27,7 @@ type MyAwaited<T extends PromiseLike<any>> = T extends PromiseLike<infer U>
   : U
 : never
 
-// ============= Explaination =============
+// ============= Explanation =============
 // T extends PromiseLike<unknown> enforces that T must be a promise like type
 // T extends PromiseLike<infer U> means if T is a promise like type that resolves to a type U, the infer keyword captures the resolved type
 // Conditional type checks if U is a promise like type, if it is then the MyAwaited<U> is recursively applied to U
